@@ -1,4 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+version = "0.0.1"
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -32,3 +36,30 @@ dependencies {
 
     testCompile "junit:junit:$rootProject.ext.junitVersion"
 }
+
+ext {
+    bintrayRepo = 'AndroidLibrary'
+    bintrayName = 'DtkjHelperLibrary'
+
+    publishedGroupId = 'com.dtkj.library'
+    libraryName = 'DtkjHelperLibrary'
+    artifact = 'DtkjHelperLibrary'
+
+    libraryDescription = 'the library help to quickly develop applications'
+
+    siteUrl = 'https://github.com/sword30021/DtkjHelperLibrary'
+    gitUrl = 'https://github.com/sword30021/DtkjHelperLibrary.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'sword'
+    developerName = 'sword'
+    developerEmail = 'sword30021@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
