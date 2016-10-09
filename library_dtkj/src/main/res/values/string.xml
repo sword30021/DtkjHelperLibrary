@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">library_dtkj</string>
+
+    <string name="text_loading">请稍后&#8230;</string>
+
+    <string name="text_dtkj_login">登&#160;&#160;&#160;&#160;录</string>
+    <string name="text_dtkj_register">注册</string>
+
+    <string name="text_dtkj_complete">完成</string>
+    <string name="text_dtkj_cancel">取消</string>
+    <string name="text_dtkj_delete">删除</string>
+    <string name="text_dtkj_ok">确认</string>
+    <string name="text_dtkj_submit">提交</string>
+    <string name="text_dtkj_save">保存</string>
+    <string name="text_dtkj_edit">编辑</string>
+    <string name="text_dtkj_release">发布</string>
+    <string name="text_dtkj_comment">评论</string>
+    <string name="text_dtkj_share">分享</string>
+    <string name="text_dtkj_praise">赞</string>
+    <string name="text_dtkj_send">发送</string>
+    <string name="text_dtkj_forget_pwd">忘记密码</string>
+</resources>
