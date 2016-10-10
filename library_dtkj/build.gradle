@@ -39,11 +39,11 @@ dependencies {
 
 ext {
     bintrayRepo = 'AndroidLibrary'
-    bintrayName = 'DtkjHelperLibrary'
+    bintrayName = 'library_dtkj'
 
     publishedGroupId = 'com.dtkj.library'
-    libraryName = 'DtkjHelperLibrary'
-    artifact = 'DtkjHelperLibrary'
+    libraryName = 'library_dtkj'
+    artifact = 'library_dtkj'
 
     libraryDescription = 'the library help to quickly develop applications'
 
