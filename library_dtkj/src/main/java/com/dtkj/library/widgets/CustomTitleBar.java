@@ -25,7 +25,7 @@ public class CustomTitleBar extends Toolbar {
     private TextView titleTextRight;
 
     public CustomTitleBar(Context context, AttributeSet attrs) {
-        super(context);
+        super(context, attrs);
         initWidgets(context);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomTitleBar);
 
