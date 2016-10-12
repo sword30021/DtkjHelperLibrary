@@ -50,7 +50,7 @@ ext {
     siteUrl = 'https://github.com/sword30021/DtkjHelperLibrary'
     gitUrl = 'https://github.com/sword30021/DtkjHelperLibrary.git'
 
-    libraryVersion = '0.0.2'
+    libraryVersion = '0.0.3'
 
     developerId = 'sword'
     developerName = 'sword'
