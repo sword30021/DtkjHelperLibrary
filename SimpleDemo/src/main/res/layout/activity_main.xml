@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dtkj="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,7 +10,9 @@
     <com.dtkj.library.widgets.CustomTitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"></com.dtkj.library.widgets.CustomTitleBar>
+        android:layout_height="?attr/actionBarSize"
+        dtkj:title_text_center="@string/app_name"
+        dtkj:text_default_color="@color/colorAccent"></com.dtkj.library.widgets.CustomTitleBar>
 
     <com.dtkj.library.widgets.CustomImageCarousel
         android:id="@+id/cic_image"

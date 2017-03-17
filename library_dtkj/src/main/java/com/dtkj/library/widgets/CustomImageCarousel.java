@@ -36,8 +36,8 @@ public class CustomImageCarousel extends RelativeLayout {
     private int totelCount = 0;
     private int currentIndex = 0;
     //    public static final int INDICATOR_STYLE_AD = 0;
-//    public static final int INDICATOR_STYLE_GUIDE = 1;
-//    private int defaultStyle = INDICATOR_STYLE_AD;
+    //    public static final int INDICATOR_STYLE_GUIDE = 1;
+    //    private int defaultStyle = INDICATOR_STYLE_AD;
     private long refreshTime = 0l;
 
     public interface OnItemChangeListener {
@@ -119,6 +119,7 @@ public class CustomImageCarousel extends RelativeLayout {
         if (len > 0) {
             for (int index = 0; index < len; index++) {
                 final ImageView pageItem = new ImageView(getContext());
+                pageItem.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 pageItem.setImageResource(resList.get(index));
                 addViewItem(pageItem);
             }
@@ -130,9 +131,14 @@ public class CustomImageCarousel extends RelativeLayout {
             throw new NullPointerException();
 
         final int len = resList.size();
+        if (viewList.size() != 0) {
+            viewList.clear();
+            mLayoutIndicator.removeAllViews();
+        }
         if (len > 0) {
             for (int index = 0; index < len; index++) {
                 final ImageView pageItem = new ImageView(getContext());
+                pageItem.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 Glide.with(context).load(resList.get(index)).placeholder(defRes).crossFade().into(pageItem);
                 addViewItem(pageItem);
             }
@@ -186,8 +192,11 @@ public class CustomImageCarousel extends RelativeLayout {
         this.totelCount = viewList.size();
         final LayoutParams params = (LayoutParams) mLayoutIndicator.getLayoutParams();
         mLayoutIndicator.setLayoutParams(params);
+        LinearLayout.LayoutParams padding = new LinearLayout.LayoutParams(20, 20);
+        padding.setMargins(0, 0, 20, 0);
         for (int index = 0; index < this.totelCount; index++) {
             final View indicator = new ImageView(getContext());
+            indicator.setLayoutParams(padding);
             mLayoutIndicator.addView(indicator, index);
         }
         refreshHandler.sendEmptyMessage(currentIndex);
@@ -308,6 +317,10 @@ public class CustomImageCarousel extends RelativeLayout {
         public void finishUpdate(View arg0) {
 
         }
+    }
+
+    public void hideIndex() {
+        mLayoutIndicator.setVisibility(GONE);
     }
 
     public ViewPager getViewPager() {

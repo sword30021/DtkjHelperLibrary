@@ -11,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -52,7 +52,7 @@ ext {
     siteUrl = 'https://github.com/sword30021/DtkjHelperLibrary'
     gitUrl = 'https://github.com/sword30021/DtkjHelperLibrary.git'
 
-    libraryVersion = '0.0.4'
+    libraryVersion = rootProject.ext.versionName
 
     developerId = 'sword'
     developerName = 'sword'
