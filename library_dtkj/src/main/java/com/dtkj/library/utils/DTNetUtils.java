@@ -47,6 +47,8 @@ public class DTNetUtils {
 
     /**
      * 打开网络设置界面
+     *
+     * @param activity 上下文
      */
     public static void openSetting(Activity activity) {
         Intent intent = new Intent("/");

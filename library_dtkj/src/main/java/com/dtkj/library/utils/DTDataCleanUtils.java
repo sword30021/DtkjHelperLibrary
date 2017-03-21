@@ -117,13 +117,14 @@ public class DTDataCleanUtils {
 
     /**
      * 获取文件
-     * Context.getExternalFilesDir() --> SDCard/Android/data/你的应用的包名/files/
+     * Context.getExternalFilesDir() -- SDCard/Android/data/你的应用的包名/files/
      * 目录，一般放一些长时间保存的数据
-     * Context.getExternalCacheDir() --> SDCard/Android/data/你的应用包名/cache/
+     * Context.getExternalCacheDir() -- SDCard/Android/data/你的应用包名/cache/
      * 目录，一般存放临时缓存数据
      *
      * @param file 文件
      * @return 文件大小
+     * @throws Exception
      */
     public static long getFolderSize(File file) throws Exception {
         long size = 0;

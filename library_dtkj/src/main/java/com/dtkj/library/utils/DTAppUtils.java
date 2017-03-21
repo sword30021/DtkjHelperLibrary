@@ -14,6 +14,7 @@ public class DTAppUtils {
      * 获取应用程序名称
      *
      * @param context 上下文
+     * @return 应用程序名称
      */
     public static String getAppName(Context context) {
         try {
