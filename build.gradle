@@ -30,8 +30,8 @@ ext {
     compileSdkVersion = 24
     buildToolsVersion = '25.0.0'
 
-    versionCode = 20170317
-    versionName = "0.0.5"
+    versionCode = 20170321
+    versionName = "0.0.6"
 
     supportLibraryVersion = '24.2.1'
     junitVersion = '4.12'
