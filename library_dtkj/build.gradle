@@ -1,4 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+version = "0.0.1"
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -7,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -30,5 +34,34 @@ dependencies {
     compile "com.android.support:design:$rootProject.supportLibraryVersion"
     compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
 
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+
     testCompile "junit:junit:$rootProject.ext.junitVersion"
 }
+
+ext {
+    bintrayRepo = 'AndroidLibrary'
+    bintrayName = 'library_dtkj'
+
+    publishedGroupId = 'com.dtkj.library'
+    libraryName = 'library_dtkj'
+    artifact = 'library_dtkj'
+
+    libraryDescription = 'the library help to quickly develop applications'
+
+    siteUrl = 'https://github.com/sword30021/DtkjHelperLibrary'
+    gitUrl = 'https://github.com/sword30021/DtkjHelperLibrary.git'
+
+    libraryVersion = rootProject.ext.versionName
+
+    developerId = 'sword'
+    developerName = 'sword'
+    developerEmail = 'sword30021@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

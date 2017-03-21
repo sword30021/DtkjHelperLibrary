@@ -5,8 +5,10 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
-
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -26,10 +28,14 @@ ext {
     minSdkVersion = 10
     targetSdkVersion = 24
     compileSdkVersion = 24
-    buildToolsVersion = '24.0.3'
+    buildToolsVersion = '25.0.0'
+
+    versionCode = 20170317
+    versionName = "0.0.5"
 
     supportLibraryVersion = '24.2.1'
     junitVersion = '4.12'
     espressoVersion = '2.2.2'
     butterknifeVersion = '8.4.0'
+    glideVersion = '3.7.0'
 }

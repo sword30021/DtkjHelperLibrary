@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomTitleBar">
-        <attr name="title_bar_backgroud" format="color"/>
+        <attr name="text_default_color" format="color"/>
+
         <attr name="title_image_left" format="reference"/>
+
         <attr name="title_text_left" format="string"/>
         <attr name="title_text_left_color" format="color"/>
+        <attr name="title_text_left_size" format="dimension"></attr>
+
         <attr name="title_text_center" format="string"/>
         <attr name="title_text_center_color" format="color"/>
+        <attr name="title_text_center_size" format="dimension"/>
+
         <attr name="title_image_right" format="reference"/>
+
         <attr name="title_text_right" format="string"/>
         <attr name="title_text_right_color" format="color"/>
+        <attr name="title_text_right_size" format="dimension"/>
     </declare-styleable>
 </resources>
