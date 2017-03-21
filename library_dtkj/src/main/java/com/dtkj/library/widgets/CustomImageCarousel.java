@@ -72,7 +72,7 @@ public class CustomImageCarousel extends RelativeLayout {
     /**
      * add single View
      *
-     * @param view
+     * @param view 添加的视图
      */
     public void addViewItem(View view) {
         final int position = viewList.size();
@@ -181,7 +181,7 @@ public class CustomImageCarousel extends RelativeLayout {
     /**
      * add setOnItemClickListener
      *
-     * @param onItemClickListener
+     * @param onItemClickListener item监听
      */
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;

@@ -12,6 +12,8 @@ import android.content.pm.PackageManager;
 public class DTAppUtils {
     /**
      * 获取应用程序名称
+     *
+     * @param context 上下文
      */
     public static String getAppName(Context context) {
         try {
@@ -27,9 +29,9 @@ public class DTAppUtils {
     }
 
     /**
-     * [获取应用程序版本名称信息]
+     * 获取应用程序版本名称信息
      *
-     * @param context
+     * @param context 上下文
      * @return 当前应用的版本名称
      */
     public static String getVersionName(Context context) {

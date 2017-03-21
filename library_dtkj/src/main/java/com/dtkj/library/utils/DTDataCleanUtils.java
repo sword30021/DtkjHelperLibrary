@@ -15,7 +15,7 @@ public class DTDataCleanUtils {
     /**
      * 清除本应用内部缓存(/data/data/com.xxx.xxx/cache)
      *
-     * @param context
+     * @param context 上下文
      */
     public static void cleanInternalCache(Context context) {
         deleteFilesByDirectory(context.getCacheDir());
@@ -24,7 +24,7 @@ public class DTDataCleanUtils {
     /**
      * 清除本应用所有数据库(/data/data/com.xxx.xxx/databases)
      *
-     * @param context
+     * @param context 上下文
      */
     public static void cleanDatabases(Context context) {
         deleteFilesByDirectory(new File("/data/data/" + context.getPackageName() + "/databases"));
@@ -33,7 +33,7 @@ public class DTDataCleanUtils {
     /**
      * 清除本应用SharedPreference(/data/data/com.xxx.xxx/shared_prefs)
      *
-     * @param context
+     * @param context 上下文
      */
     public static void cleanSharedPreference(Context context) {
         deleteFilesByDirectory(new File("/data/data/" + context.getPackageName() + "/shared_prefs"));
@@ -42,8 +42,8 @@ public class DTDataCleanUtils {
     /**
      * 按名字清除本应用数据库
      *
-     * @param context
-     * @param dbName
+     * @param context 上下文
+     * @param dbName  数据库名称
      */
     public static void cleanDatabaseByName(Context context, String dbName) {
         context.deleteDatabase(dbName);
@@ -52,7 +52,7 @@ public class DTDataCleanUtils {
     /**
      * 清除/data/data/com.xxx.xxx/files下的内容
      *
-     * @param context
+     * @param context 上下文
      */
     public static void cleanFiles(Context context) {
         deleteFilesByDirectory(context.getFilesDir());
@@ -61,7 +61,7 @@ public class DTDataCleanUtils {
     /**
      * 清除外部cache下的内容(/mnt/sdcard/android/data/com.xxx.xxx/cache)
      *
-     * @param context
+     * @param context 上下文
      */
     public static void cleanExternalCache(Context context) {
         if (Environment.getExternalStorageState().equals(
@@ -73,7 +73,7 @@ public class DTDataCleanUtils {
     /**
      * 清除自定义路径下的文件，使用需小心，请不要误删。而且只支持目录下的文件删除
      *
-     * @param filePath
+     * @param filePath 文件路径
      */
     public static void cleanCustomCache(String filePath) {
         deleteFilesByDirectory(new File(filePath));
@@ -82,8 +82,8 @@ public class DTDataCleanUtils {
     /**
      * 清除本应用所有的数据
      *
-     * @param context
-     * @param filepath
+     * @param context  上下文
+     * @param filepath 文件路径
      */
     public static void cleanApplicationData(Context context, String... filepath) {
         cleanInternalCache(context);
@@ -102,7 +102,7 @@ public class DTDataCleanUtils {
     /**
      * 删除方法 这里只会删除某个文件夹下的文件，如果传入的directory是个文件，将不做处理 * *
      *
-     * @param directory
+     * @param directory 文件
      */
     private static void deleteFilesByDirectory(File directory) {
         if (directory.isFile()) {
@@ -122,9 +122,8 @@ public class DTDataCleanUtils {
      * Context.getExternalCacheDir() --> SDCard/Android/data/你的应用包名/cache/
      * 目录，一般存放临时缓存数据
      *
-     * @param file
-     * @return
-     * @throws Exception
+     * @param file 文件
+     * @return 文件大小
      */
     public static long getFolderSize(File file) throws Exception {
         long size = 0;
@@ -147,9 +146,8 @@ public class DTDataCleanUtils {
     /**
      * 删除指定目录下文件及目录
      *
-     * @param deleteThisPath
-     * @param deleteThisPath
-     * @return
+     * @param filePath       文件路径
+     * @param deleteThisPath 是否删除
      */
     public static void deleteFolderFile(String filePath, boolean deleteThisPath) {
         if (!TextUtils.isEmpty(filePath)) {

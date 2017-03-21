@@ -16,8 +16,8 @@ public class DTNetUtils {
     /**
      * 判断网络是否连接
      *
-     * @param context
-     * @return
+     * @param context 上下文
+     * @return true：是，false：否
      */
     public static boolean isConnected(Context context) {
         ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -34,6 +34,9 @@ public class DTNetUtils {
 
     /**
      * 判断是否是wifi连接
+     *
+     * @param context 上下文
+     * @return true：是，false：否
      */
     public static boolean isWifi(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

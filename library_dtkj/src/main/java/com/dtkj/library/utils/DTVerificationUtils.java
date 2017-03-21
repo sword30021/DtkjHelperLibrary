@@ -10,12 +10,10 @@ import java.util.regex.Pattern;
  * Description: the utils for verification
  */
 public class DTVerificationUtils {
-    private final static Pattern emailer = Pattern
-        .compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
+    private final static Pattern emailer = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
     private static String _codeError;
     // wi =2(n-1)(mod 11)
-    final static int[] wi = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4,
-        2, 1};
+    final static int[] wi = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1};
     // verify digit
     final static int[] vi = {1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2};
     private static int[] ai = new int[18];
@@ -49,8 +47,8 @@ public class DTVerificationUtils {
     /**
      * 验证手机号
      *
-     * @param str
-     * @return
+     * @param str 手机号码字符串
+     * @return true：是，false：否
      */
     public static boolean isMobile(String str) {
         Pattern p = null;
@@ -66,8 +64,8 @@ public class DTVerificationUtils {
     /**
      * 验证邮箱
      *
-     * @param email
-     * @return
+     * @param email 邮箱字符串
+     * @return true：是，false：否
      */
     public static boolean isEmail(String email) {
         if (email == null || email.trim().length() == 0)
@@ -91,8 +89,8 @@ public class DTVerificationUtils {
     /**
      * 验证位数
      *
-     * @param code
-     * @return
+     * @param code 身份证字符串
+     * @return true：是，false：否
      */
     public static boolean verifyLength(String code) {
         int length = code.length();
@@ -106,8 +104,8 @@ public class DTVerificationUtils {
     /**
      * 验证省区
      *
-     * @param code
-     * @return
+     * @param code 省区字符串
+     * @return true：是，false：否
      */
     public static boolean verifyAreaCode(String code) {
         String areaCode = code.substring(0, 2);
@@ -121,8 +119,8 @@ public class DTVerificationUtils {
     /**
      * 验证生日
      *
-     * @param code
-     * @return
+     * @param code 生日字符串
+     * @return true：是，false：否
      */
     public static boolean verifyBirthdayCode(String code) {
         String month = code.substring(10, 12);

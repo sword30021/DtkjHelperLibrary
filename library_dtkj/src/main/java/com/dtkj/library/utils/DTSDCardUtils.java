@@ -15,28 +15,25 @@ public class DTSDCardUtils {
     /**
      * 判断SDCard是否可用
      *
-     * @return
+     * @return true：是，false：否
      */
     public static boolean isSDCardEnable() {
-        return Environment.getExternalStorageState().equals(
-            Environment.MEDIA_MOUNTED);
-
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     /**
      * 获取SD卡路径
      *
-     * @return
+     * @return sd卡路径
      */
     public static String getSDCardPath() {
-        return Environment.getExternalStorageDirectory().getAbsolutePath()
-            + File.separator;
+        return Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator;
     }
 
     /**
      * 获取SD卡的剩余容量 单位byte
      *
-     * @return
+     * @return sd卡剩余空间
      */
     public static long getSDCardAllSize() {
         if (isSDCardEnable()) {
@@ -71,7 +68,7 @@ public class DTSDCardUtils {
     /**
      * 获取系统存储路径
      *
-     * @return
+     * @return 系统存储路径
      */
     public static String getRootDirectoryPath() {
         return Environment.getRootDirectory().getAbsolutePath();
