@@ -11,11 +11,20 @@
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        dtkj:title_text_center="@string/app_name"
-        dtkj:text_default_color="@color/colorAccent"></com.dtkj.library.widgets.CustomTitleBar>
+        dtkj:text_default_color="@color/colorAccent"
+        dtkj:title_text_center="@string/app_name"></com.dtkj.library.widgets.CustomTitleBar>
 
     <com.dtkj.library.widgets.CustomImageCarousel
         android:id="@+id/cic_image"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_150"></com.dtkj.library.widgets.CustomImageCarousel>
+        android:layout_height="@dimen/dimen_200"
+        android:visibility="gone"></com.dtkj.library.widgets.CustomImageCarousel>
+
+    <TextView
+        android:id="@+id/tv_send_message"
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_50"
+        android:gravity="center"
+        android:text="获取验证码"
+        android:visibility="gone"/>
 </LinearLayout>

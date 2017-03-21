@@ -22,7 +22,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by sword on 16/10/12.
+ * Created by sword on 16/10/8.
+ * Email: 1619153872@qq.com
+ * Description: custom carousel
  */
 
 public class CustomImageCarousel extends RelativeLayout {
